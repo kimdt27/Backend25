@@ -37,21 +37,19 @@ class ImageResizer{
     public function resizeToHeight($height){
         $ratio = $height / $this->getHeight();
         $width = $this->getWidth() * $ratio;
-        $this->resize($width, $height);
+        $this->resize(round($width), round($height));
     }
 
     public function resizeToWidth($width){
         $ratio = $width / $this->getWidth();
         $height = $this->getHeight() * $ratio;
         $this->resize(round($width), round($height));
-        var_dump(round($width));
-        var_dump(round($height));
     }
 
     public function resizeToScale($scale){
         $width = $this->getWidth() * $scale / 100;
         $height = $this->getHeight() * $scale / 100;
-        $this->resize($width, $height);
+        $this->resize(round($width), round($height));
     }
 
     public function resize($width, $height){
