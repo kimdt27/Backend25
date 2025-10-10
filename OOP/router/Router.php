@@ -5,8 +5,8 @@ class Router{
 	private $request;
 
 	//construct to set local request var
-	public function __construct($request){
-		$this->request = $request;
+	public function __construct($URLrequest){
+		$this->request = $URLrequest;
 	}
 
 	//function to trim / from end, set an array of arguments and require php file
