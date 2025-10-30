@@ -1,13 +1,15 @@
 <?php
 class Singleton
 {
+    private static $instances = [];
+
     public static function getInstance()
     {
-        static $instance = null;
-        if (null === $instance) {
-            $instance = new static();
+        $className = static::class; // What class???
+        if (!isset(self::$instances[$className])) {
+            self::$instances[$className] = new static();
         }
-        return $instance;
+        return self::$instances[$className];
     }
     //constructor Protected to prevent creating
     //a new instance of the Singleton
