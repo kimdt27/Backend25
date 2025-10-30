@@ -25,6 +25,6 @@ class PhoneFactory
 }
 
 // have the factory create the smartphone object
-$smartphone = PhoneFactory::create('Samsung', 'Galaxy S10');
-// outputs "Samsung Galaxy S10"
+$smartphone = PhoneFactory::create('Samsung', 'Galaxy S23');
+// outputs "Samsung Galaxy S23"
 print_r($smartphone->getMakeAndModel());
