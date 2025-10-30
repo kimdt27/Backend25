@@ -34,9 +34,8 @@ var_dump($anotherObj === Singleton::getInstance());
 //returns bool(false) - Singleton can't set up a new instance.
 
 var_dump($anotherObj === SingletonChild::getInstance());
-//returns bool(true) - Singleton works, both variables ($anotherObj & $obj) contain the same instance.
-
-
+//returns bool(true) - Singleton works, both variables
+// ($anotherObj & $obj) contain the same instance.
 
 $one = Singleton::getInstance();
 $two = Singleton::getInstance();
