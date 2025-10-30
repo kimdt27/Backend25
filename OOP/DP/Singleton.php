@@ -34,3 +34,9 @@ var_dump($anotherObj === Singleton::getInstance());
 var_dump($anotherObj === SingletonChild::getInstance());
 //returns bool(true) - Singleton works, both variables ($anotherObj & $obj) contain the same instance.
 
+
+
+$one = Singleton::getInstance();
+$two = Singleton::getInstance();
+
+var_dump($one === $two); // true - Same object!
